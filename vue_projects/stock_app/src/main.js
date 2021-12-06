@@ -2,8 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
+import CountryFlag from 'vue-country-flag'
+
 
 Vue.use(VueRouter)
+Vue.component('country-flag', CountryFlag)
 
 const paths = [
   {

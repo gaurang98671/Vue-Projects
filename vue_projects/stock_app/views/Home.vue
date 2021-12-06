@@ -3,6 +3,7 @@
     <div>
       <SearchBar @fetch-stocks="populate"/>
       <div :key="stock.symbol" v-for="stock in stocks">
+        <br>
         <StockCard :stockData='stock' />
       </div>
     </div>
