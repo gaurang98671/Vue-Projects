@@ -2,17 +2,20 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
-import CountryFlag from 'vue-country-flag'
-
-
+import StockInfo from '../views/StockInfo'
 Vue.use(VueRouter)
-Vue.component('country-flag', CountryFlag)
+
 
 const paths = [
   {
     path: "/",
     component: Home 
   },
+  {
+    name: "StockInfo",
+    path: "/stock/:stockID",
+    component: StockInfo
+  }
 ]
 
 const router = new VueRouter({

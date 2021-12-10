@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="card" @click="stockInfo(stockData['1. symbol'])">
         <h1 class = "symbol">
             {{stockData['1. symbol']}}
         </h1>
@@ -29,6 +29,10 @@ export default {
     methods: {
         onClick(){
             console.log("Stock card clicked")
+        },
+
+        stockInfo(stockID){
+            this.$router.push({name:"StockInfo", params: { stockID: stockID }})
         }
     }
 }
